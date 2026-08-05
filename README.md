@@ -1,5 +1,123 @@
 # DebugVisualizer
 
+<img width="1920" height="1032" alt="Screenshot 2026-08-04 124940" src="https://github.com/user-attachments/assets/2a28316d-a827-4ce0-815a-b74dc50b86bb" />
+
+
+# DebugVisualizer
+
+**See your program, don't read it.**
+An open-source PyCharm plugin that renders algorithms and data structures live inside the Python debugger.
+
+```
+pip install text-debugging     →     pip install understanding
+```
+
+---
+
+## The Problem
+
+Debuggers show you this:
+
+```python
+nums = [5, 4, 3, 2]
+```
+
+DebugVisualizer shows you this:
+
+```
+ index   0   1   2   3
+        ┌───┬───┬───┬───┐
+        │ 5 │ 4 │ 3 │ 2 │
+        └───┴───┴───┴───┘
+                ↑
+                i
+```
+
+No manual refresh, no expanding nested objects — it updates automatically on every step and breakpoint.
+
+---
+
+## More Examples
+
+**Stack**
+```
+   TOP
+ ┌──────┐
+ │  30  │
+ ├──────┤
+ │  20  │
+ ├──────┤
+ │  10  │
+ └──────┘
+```
+
+**Graph**
+```
+     1
+     ●────●2
+     │   ╱
+     │  ╱
+     │ ╱
+     ●────●3
+      \
+       \
+        ●4
+```
+
+**Heap**
+```
+           1
+         /   \
+        3     5
+       / \   / \
+      7  9  8  10
+```
+
+---
+
+## What It Does
+
+| Category | Highlights |
+|---|---|
+| **Live debugging** | Real-time updates while stepping, timeline playback, snapshot history, pin/focus views |
+| **Data structures** | Arrays, matrices, stacks, queues, heaps, linked lists, binary trees, graphs, sets, dicts, custom objects, recursion stacks |
+| **Debugger intelligence** | Variable tracking, change highlighting, scope tracking, frame & recursion visualization |
+| **Visual polish** | Dark theme, animated diffs, compact multi-view canvas |
+
+---
+
+## Status & Roadmap
+
+```
+● v0.1.0 — MVP (current)     Stable visualization engine + PyCharm debugger integration
+○ v0.2   — Object detection  Real linked-list/tree detection, pointer overlays, loop visualization
+○ v0.3   — Algorithm Tutor   Bubble/Merge Sort, DFS, BFS, Dijkstra, Prim, Kruskal, Binary Search, DP, Backtracking
+○ v1.0   — Stable release    Marketplace publication, settings page, packaged engine, docs, sample projects
+```
+
+---
+
+## Requirements
+
+- PyCharm
+- Python 3.11+
+- DebugVisualizer Engine *(packaging planned)*
+
+## Built With
+
+`Kotlin` · `IntelliJ Platform SDK` · `PyCharm Debugger API` · `Python` · `Flet` · `WebSockets`
+
+## Vision
+
+Make debugging *and* learning algorithms intuitive — for students learning data structures, candidates prepping for coding interviews, and instructors teaching algorithms.
+
+---
+
+**License:** MIT · **Contributions welcome** — open an issue or PR.
+
+`pycharm` `jetbrains-plugin` `python` `debugger` `visualization` `algorithms` `data-structures` `education` `graph` `heap` `stack` `queue` `linked-list` `tree` `recursion` `flet` `kotlin` `intellij-platform`
+
+
 ![Build](https://github.com/Sedemsenaya/DebugVisualizer/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
